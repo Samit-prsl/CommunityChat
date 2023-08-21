@@ -15,7 +15,7 @@ export default function Hero() {
         <button className='mr-5 py-3 px-8 font-[Quicksand] bg-[#a6d644] font-bold rounded-xl border-2 border-black shadow-2xl'>Meet</button>
       </div>
     </div>
-    <div>
+    <div className=''>
       <img src="https://cdn.dribbble.com/userupload/2740231/file/original-db0fd029bd4626adcfba7e67b0b9cf4c.png?resize=1024x768" alt="" className=' w-full h-[90%] lg:rounded-tl-[8rem] rounded-tl-[5rem]'/>
     </div>
     </div>
