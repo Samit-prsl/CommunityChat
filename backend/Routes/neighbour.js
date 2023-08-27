@@ -78,19 +78,41 @@ try {
 }
 })
 
-Router.put('/profile',auth,async(req,res)=>{
+Router.put('/profile/:id',auth,async(req,res)=>{
 
   try {
     
-    const isAuth = await neighbour.findOne({username : req.body.username})
-    if(isAuth)
+    const isAuth = await neighbour.findOne({username : req.user.username})
+    if(!isAuth)
     return res.status(403).json('unauthorized')
   
     try {
       
-      
+      const profile = await neighbour.findByIdAndUpdate(req.params.id,{$set: req.body},{new:true})
+      res.status(200).json(profile)
+
     } catch (err) {
       res.status(500).json(err)
+    }
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+Router.delete('/profile/:id',auth,async(req,res)=>{
+  try {
+    
+    const isAuth = await neighbour.findOne({username : req.user.username})
+    if(!isAuth)
+    return res.status(403).json("Unauthorized")
+
+    try {
+      
+      const profile = await neighbour.findByIdAndDelete(req.params.id)
+      res.status(200).json("Deleted succesfully!")
+      
+    } catch (err) {
+      res.status(500).json("Cannot delete profile")
     }
   } catch (err) {
     res.status(500).json(err)
