@@ -26,8 +26,8 @@ Router.post('/register', async (req, res) => {
   
       res.status(201).json({ message: 'User created successfully' });
     } catch (err) {
-      res.status(500).json({message : 'Something went wrong'});
-      //console.log(err);
+      //res.status(500).json({message : 'Something went wrong'});
+      console.log(err);
     }
   });
 
@@ -67,7 +67,7 @@ try {
 
 try {
   
-  const profile = await neighbour.find()
+  const profile = await neighbour.findOne({username : req.user.username})
   res.status(200).json(profile)
 
     } catch (err) {
@@ -119,15 +119,19 @@ Router.delete('/profile/:id',auth,async(req,res)=>{
   }
 })
 
-Router.post('/room',auth,async(req,res)=>{
+Router.get('/room/:id',auth,async(req,res)=>{
   try {
     
     const isAuth = await neighbour.findOne({username : req.user.username})
-    if(isAuth)
+    if(!isAuth)
     return res.status(403).json('Unauthorized')
 
     try {
       
+     const pincode = req.params.id
+     //console.log(typeof(pincode))
+     const getNeighbours = await neighbour.find({pincode:pincode})
+     res.status(200).json(getNeighbours)
       
     } catch (err) {
       res.status(500).json(err)

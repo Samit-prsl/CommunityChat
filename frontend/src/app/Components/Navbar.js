@@ -20,12 +20,12 @@ export default function Navbar() {
       <div>
        
         <ul className=' flex flex-col justify-between ml-3  font-[Poppins] font-normal gap-8 text-2xl '>
-            <li>Home</li>
-            <li>About</li>
+            <a href='/'><li >Home</li></a>
+            <a href='/#about'><li>About</li></a>
             <li>Meet</li>
-            <li>Chat</li>
+            <a href='/login'><li>Chat</li></a>
             <li>Contact</li>
-            <button className=' bg-[#a6d644]  py-0 px-6 p-2 rounded-lg shadow-xl border-2  border-black'>Login</button>
+            <a href='/login'><button className=' bg-[#a6d644]  py-0 px-6 p-2 rounded-lg shadow-xl border-2  border-black'>Login</button></a>
         </ul>
       </div>
     </div>
@@ -38,14 +38,14 @@ export default function Navbar() {
       <div className=' lg:flex justify-between gap-8 hidden'>
       <div>
         <ul className=' lg:flex lg:justify-between font-[Poppins] font-normal gap-8 text-2xl  '>
-            <li>Home</li>
-            <li>About</li>
+            <a href='/'><li>Home</li></a>
+            <a href='/#about'><li>About</li></a>
             <li>Meet</li>
-            <li>Chat</li>
+            <a href='/login'><li>Chat</li></a>
             <li>Contact</li>
         </ul>
       </div>
-      <button className=' bg-[#a6d644]  py-0 px-6 p-2 rounded-lg shadow-xl border-2  border-black hidden lg:block '>Login</button>
+      <a href='/login' ><button className=' bg-[#a6d644]  py-0 px-6 p-2 rounded-lg shadow-xl border-2  border-black hidden lg:block '>Login</button></a>
       </div>
     </div>
   )

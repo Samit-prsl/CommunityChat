@@ -16,7 +16,7 @@ io.on("connection",(socket)=>{
 
     socket.on('joinRoom',(data)=>{
         socket.join(data)
-        console.log(`User joined room : ${data}`)
+        //console.log(`User joined room : ${data}`)
     })
 
     socket.on('send',(data)=>{
@@ -25,7 +25,7 @@ io.on("connection",(socket)=>{
     })
 
     socket.on("disconnect",()=>{
-        //console.log(`User disconnected : ${socket.id}`)
+        console.log(`User disconnected : ${socket.id}`)
     })
 })
 

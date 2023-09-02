@@ -11,7 +11,7 @@ export default function Hero() {
         A Intuitive Platform to connect with Similar Ideas, around the Globe, Build Yours Now...
       </div>
       <div className=' lg:py-20 py-8  '>
-        <button className='lg:mr-[5rem] mr-2 py-3 font-[Quicksand] px-8 bg-gray-100 font-bold rounded-xl border-2 border-black shadow-2xl'>Get Started Today</button>
+        <a href="/register"><button className='lg:mr-[5rem] mr-2 py-3 font-[Quicksand] px-8 bg-gray-100 font-bold rounded-xl border-2 border-black shadow-2xl'>Get Started Today</button></a>
         <button className='mr-5 py-3 px-8 font-[Quicksand] bg-[#a6d644] font-bold rounded-xl border-2 border-black shadow-2xl'>Meet</button>
       </div>
     </div>

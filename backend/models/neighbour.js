@@ -21,12 +21,6 @@ const neighbourSchema = new mongoose.Schema({
     },
     pincode : {
         type : Number,
-        validate: {
-            validator: function(v) {
-                return (v.toString().length === 6);
-            },
-            message: 'Pincode must be exactly 6 digits.'
-            }
     },
     faq : [
         {

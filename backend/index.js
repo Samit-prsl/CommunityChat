@@ -3,6 +3,7 @@ const cors = require('cors')
 const dotenv = require('dotenv').config()
 const mongoose = require('mongoose')
 const neighbour = require('./Routes/neighbour')
+const pincode = require('./Routes/pincode')
 //const trainer = require('./Routes/trainer')
 const app = express()
 
@@ -10,6 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use('/api/neighbour',neighbour)
+app.use('/api/pincodes',pincode)
 //app.use('/api/trainer',trainer)
 
 const PORT = process.env.PORT || 5000
