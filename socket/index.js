@@ -11,6 +11,8 @@ const io = new Server(server,{
     }
 })
 
+const PORT = process.env.PORT || 8000
+
 io.on("connection",(socket)=>{
    // console.log(`User connected : ${socket.id}`)
 
@@ -33,6 +35,6 @@ io.on("connection",(socket)=>{
 
 
 
-server.listen(8001,()=>{
-    console.log(`Server listening at 8001`)
+server.listen(PORT,()=>{
+    console.log(`Server listening at ${PORT}`)
 })
