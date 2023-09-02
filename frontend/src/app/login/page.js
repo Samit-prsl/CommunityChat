@@ -54,7 +54,7 @@ export default function Login() {
         <input type="password" placeholder=' Enter Password' className=' font-[Quicksand] lg:text-xl text-lg outline-none p-3 bg-[#a18527] text-black rounded-xl placeholder:text-blue-50'
         onChange={(e)=>{Setpassword(e.target.value)}} />
          <button className={` px-10 py-3 bg-[#040D12] text-[#d4af37] font-[Poppins] rounded-xl hover:bg-[#0d1b22] ${loading ? 'cursor-not-allowed':'cursor-pointer'}`} onClick={handlesubmit}>Sign in</button>
-         <a className='text-lg lg:text-xl font-[Cinzel] text-[#362e12] hover:text-[#534823]' href='/register'>Did'nt Registered? Signup!</a>
+         <a className='text-lg lg:text-xl font-[Cinzel] text-[#362e12] hover:text-[#534823]' href='/register'>Didnt Registered? Signup!</a>
         <Toaster  position="top-center"/>
       </div>
     </div>

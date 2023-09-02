@@ -10,7 +10,7 @@ import GetProfile from '../Components/GetProfile';
 //import { data } from 'autoprefixer'
 const socket = io.connect('https://commchat-socket.onrender.com/')
 
-export default function page() {
+export default function Page() {
 
     const [loading,Setloading] = useState(false)
     const [pincode,Setpincode] = useState('')
