@@ -35,14 +35,14 @@ export default function GetProfile({url}) {
               <div key={index} className=' overflow-y-auto border-b-2 border-black'>
                 
                 <h1 className=' lg:text-2xl py-3 text-2xl text-left'>Name : {items.username}</h1>
-                <h1 className=' lg:text-2xl py-3 text-2xl text-right'>Stays at : "{items.address}"</h1>
+                <h1 className=' lg:text-2xl py-3 text-2xl text-right'>Stays at : {items.address}</h1>
                 
               </div>
               </>
             )
         }):<>
         <div className=' h-screen flex justify-center items-center font-[Quicksand]'>
-            <h1 className=' lg:text-2xl py-3 text-2xl'>You're Lonely here 🥲</h1>
+            <h1 className=' lg:text-2xl py-3 text-2xl'>You are Lonely here 🥲</h1>
         </div>
         </>}
     </div>
