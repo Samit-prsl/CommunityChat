@@ -27,7 +27,7 @@ export default function Register() {
               },
             icon: '🙏',
           });
-            const res = await axios.post('http://localhost:5000/api/neighbour/register',{
+            const res = await axios.post('https://commchat-api.onrender.com/api/neighbour/register',{
                 username,password,email,address,profession,pincode
             })
             console.log(res.data)

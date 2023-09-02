@@ -22,7 +22,7 @@ export default function Login() {
             },
           icon: '🙏',
         });
-          const res = await axios.post('http://localhost:5000/api/neighbour/login',{
+          const res = await axios.post('https://commchat-api.onrender.com/api/neighbour/login',{
               username,password
           })
           localStorage.setItem('token',res.data.token)

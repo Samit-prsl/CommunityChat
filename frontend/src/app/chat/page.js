@@ -8,7 +8,7 @@ import {IoMdContacts} from 'react-icons/io'
 import Link from 'next/link';
 import GetProfile from '../Components/GetProfile';
 //import { data } from 'autoprefixer'
-const socket = io.connect('http://localhost:8001')
+const socket = io.connect('https://commchat-socket.onrender.com/')
 
 export default function page() {
 
@@ -24,7 +24,7 @@ export default function page() {
         try {
           
           const token = localStorage.getItem('token')
-          const res = await axios.get('http://localhost:5000/api/neighbour/profile/',{
+          const res = await axios.get('https://commchat-api.onrender.com/api/neighbour/profile/',{
             headers : {
               Authorization : `Bearer ${token}`
             }
@@ -82,7 +82,7 @@ export default function page() {
         })
     },[socket])
 
-    const url = "http://localhost:5000/api/neighbour/room/"+pincode 
+    const url = "https://commchat-api.onrender.com/api/neighbour/room/"+pincode 
 
     let profile = false
 
