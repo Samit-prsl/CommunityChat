@@ -18,11 +18,11 @@ io.on("connection",(socket)=>{
 
     socket.on('joinRoom',(data)=>{
         socket.join(data)
-        console.log(`User joined room : ${data}`)
+        //console.log(`User joined room : ${data}`)
     })
 
     socket.on('send',(data)=>{
-        console.log(data)
+        //console.log(data)
         socket.to(data.room).emit('receive',data)
     })
 
