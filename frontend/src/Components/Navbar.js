@@ -1,7 +1,6 @@
-"use client"
 
 import React, { useState } from 'react'
-import Link from 'next/link'
+//import Link from 'next/link'
 import {RxCross1} from 'react-icons/rx'
 import {VscThreeBars} from 'react-icons/vsc'
 
@@ -10,7 +9,7 @@ export default function Navbar() {
   return (
     <div className=' lg:p-8 p-5 bg-yellow-50 flex justify-between lg:h-24 h-20 top-0 sticky z-10 border-b-[1px] border-black'>
       <div>
-        <div className=' lg:text-4xl text-2xl font-[Quicksand]'><Link href='/'>CommunityChat</Link></div>
+        <div className=' lg:text-4xl text-2xl font-[Quicksand]'><a href='/'>CommunityChat</a></div>
       </div>
       <div className=' lg:hidden  '>
         {click ? 

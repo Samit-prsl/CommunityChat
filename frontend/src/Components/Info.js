@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import {ImQuotesLeft,ImQuotesRight} from 'react-icons/im'
 export default function Layout() {

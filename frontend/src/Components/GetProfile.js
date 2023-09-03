@@ -24,7 +24,7 @@ export default function GetProfile({url}) {
       useEffect(()=>{
         getNeighbours()
         //console.log(url)
-      },[])
+      },[getNeighbours])
 
   return (
     <div className=' p-5 font-[Quicksand] '>

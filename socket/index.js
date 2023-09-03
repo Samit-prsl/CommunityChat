@@ -22,7 +22,7 @@ io.on("connection",(socket)=>{
     })
 
     socket.on('send',(data)=>{
-        //console.log(data)
+        console.log(data)
         socket.to(data.room).emit('receive',data)
     })
 
